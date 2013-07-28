@@ -1,0 +1,12 @@
+<form {{action save this on="submit"}} class="form-horizontal">
+<legend>Crear Pelicula</legend>
+
+        {{partial "films/film_fields"}}
+
+<div class="form-actions">
+{{submitButton "Crear"}}
+<button class="btn" {{action cancel}}>Cancel</button>
+        </div>
+        </form>
+
+

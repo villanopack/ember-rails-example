@@ -1,0 +1,24 @@
+<h5 style="float: left;margin-bottom: 30px">Total actores indexadas :  {{numActores}} </h5>
+
+        {{#linkTo "actors.new" }} <button class="btn btn-primary" style="float: right"> Crear Actor </button>{{/linkTo}}
+
+<table class="table">
+<thead>
+<tr>
+  <th>nombre</th>
+  <th>apellido</th>
+  <th>nacionalidad</th>
+  <th>Acciones</th>
+</tr>
+</thead>
+<tbody>
+{{#each actor in controller}}
+<tr>
+  <td>{{actor.nombre}}</td>
+  <td>{{actor.apellido}}</td>
+  <td>{{actor.nacionalidad}}</td>
+  <td>{{#linkTo 'actors.actor' actor}} <button class="btn">Ver</button> {{/linkTo}}</td>
+</tr>
+{{/each}}
+</tbody>
+</table>

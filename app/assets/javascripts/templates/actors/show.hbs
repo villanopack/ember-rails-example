@@ -1,0 +1,41 @@
+<div class="rows">
+  <div class="caracteristicas span6">
+    <div class="general span12">
+      <div class="rows">
+        <div class="descripcion span6">
+          <h3>Nombre</h3>
+          <p>{{ nombre }}</p>
+
+          <h3>Apellido</h3>
+          <p>{{ apellido }}</p>
+
+          <h5>Nacionalidad</h5>
+          <p>{{ nacionalidad }} </p>
+
+          <h5>Fecha Nacimiento</h5>
+          <p>{{ fecha_nacimiento }} </p>
+
+          <h5>Peliculas en las que aparece <small></small></h5>
+          <ul>
+            {{#each film in films}}
+            <li>{{#linkTo 'films.film' film}} {{ film.titulo }} {{/linkTo}}</li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="multimedia span6">
+          <br/>
+          <br/>
+          <img class="thumb" style="height: 150px;width: 150px" {{bindAttr  src="url_pefil" }} />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="Acciones span6">
+    <h3>Acciones</h3>
+    <ul>
+      <li style="list-style: none; margin-bottom: 10px">{{#linkTo 'actors'}} <button class="btn"> Volver Listado </button>{{/linkTo}}</li>
+      <li style="list-style: none; margin-bottom: 10px">{{#linkTo 'actors.edit' this}} <button class="btn "> Editar Datos</button>{{/linkTo}}</li>
+      <li style="list-style: none;"><button {{action destroy}} class="btn btn-danger"> Eliminar </button></li>
+  </ul>
+</div>
+        </div>

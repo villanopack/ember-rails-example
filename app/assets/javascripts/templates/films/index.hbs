@@ -1,0 +1,24 @@
+<h5 style="float: left;margin-bottom: 30px">Total películas indexadas :  {{numPeliculas}} </h5>
+
+{{#linkTo "films.new" }} <button class="btn btn-primary" style="float: right"> Crear Pelicula </button>{{/linkTo}}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Categoria</th>
+      <th>Fecho Estreno</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+<tbody>
+{{#each film in controller}}
+<tr>
+  <td>{{film.titulo}}</td>
+  <td>{{film.categoria}}</td>
+  <td>{{film.created_at}}</td>
+  <td>{{#linkTo 'films.film' film}} <button class="btn">Ver</button> {{/linkTo}}</td>
+</tr>
+{{/each}}
+</tbody>
+</table>

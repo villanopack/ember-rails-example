@@ -1,0 +1,30 @@
+<div class="control-group">
+  <label class="control-label" for="nombre">Nombre</label>
+  <div class="controls">
+    {{view Ember.TextField valueBinding="nombre" id="nombre" placeholder="Nombre del actor" required="true"}}
+  </div>
+</div>
+<div class="control-group">
+<label class="control-label" for="apellido">Apellido</label>
+<div class="controls">
+  {{view Ember.TextField valueBinding="apellido" id="apellido" placeholder="Apellidos del actor" required="true"}}
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="nacionalidad">Nacionalidad</label>
+<div class="controls">
+  {{view Ember.TextField valueBinding="nacionalidad" id="nacionalidad" placeholder="Nacionalidad del actor" required="true"}}
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="fecha_nacimiento">Fecha Nacimiento</label>
+<div class="controls">
+  {{view App.DatePicker fechaBinding="fecha_nacimiento" required="true"}}
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="url_pefil">Foto perfil</label>
+<div class="controls">
+  {{view Ember.TextArea valueBinding="url_pefil" id="url_pefil" placeholder="Ejemplo: http://www.dominio.com/foto.jpg"}}
+  <img style="margin-left: 20px;height: 50px;" {{bindAttr src="url_pefil"}} />
+</div>

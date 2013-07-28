@@ -1,0 +1,67 @@
+<div class="div_buscador span12">
+
+  <form {{ action buscar on="submit"}} class="form-inline">
+    <legend>Buscador general</legend>
+    <div class="control-group">
+      <label class="control-label" for="peliculas">Peliculas</label>
+      <div class="controls">
+        {{view Ember.TextField valueBinding=query placeholder="titulo de la pelicular" required="true"}}
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        {{view Ember.Checkbox checkedBinding="affinity" }}  Buscar en omdbapi
+      </div>
+    </div>
+    <button {{action buscar }} type="submit" class="btn btn-primary">Buscar</button>
+  </form>
+</div>
+
+ {{#if affinity}}
+
+ <legend>Listado de Peliculas - OmdbApi</legend>
+ <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Categoria</th>
+      <th>Duracion</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each film in peliculas}}
+    <tr>
+      <td>{{film.titulo}}</td>
+      <td>{{film.categoria}}</td>
+      <td>{{film.duration}}</td>
+    </tr>
+  {{/each}}
+  </tbody>
+ </table>
+
+ {{ else }}
+
+  <legend>Listado de Peliculas - Local</legend>
+  <table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Titulo</th>
+    <th>Categoria</th>
+    <th>Duracion</th>
+    <th>Acciones</th>
+  </tr>
+  </thead>
+  <tbody>
+  {{#each film in resultados}}
+  <tr>
+    <td>{{film.titulo}}</td>
+    <td>{{film.categoria}}</td>
+    <td>{{film.duration}}</td>
+    <td>{{#linkTo 'films.film' film}}<button class="btn btn-primary">Ver</button>{{/linkTo}}</td>
+  </tr>
+  {{/each}}
+  </tbody>
+  </table>
+
+ {{/if}}

@@ -1,0 +1,16 @@
+<div class="row-fluid">
+  <div class="span3">
+    <div class="well sidebar-nav">
+      <ul class="nav nav-list">
+        <li class="nav-header">Sidebar</li>
+        <li {{ bindAttr class="isPeliculas:active" }} >{{#linkTo 'films'}} Peliculas {{/linkTo}}</li>
+        <li {{ bindAttr class="isActores:active" }} >{{#linkTo 'actors'}} Actores {{/linkTo}}</li>
+        <li {{ bindAttr class="isBuscador:active" }}>{{#linkTo 'buscador'}} Buscador {{/linkTo}}</li>
+        <li>{{ruta_controler}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="span9">
+    {{ outlet }}
+  </div>
+</div>
