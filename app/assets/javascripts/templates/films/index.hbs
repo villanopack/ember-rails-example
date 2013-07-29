@@ -18,6 +18,7 @@
   <td>{{film.categoria}}</td>
   <td>{{film.created_at}}</td>
   <td>{{#linkTo 'films.film' film}} <button class="btn">Ver</button> {{/linkTo}}</td>
+  <td> <button {{action borrar film}} class="btn">Borrar</button></td>
 </tr>
 {{/each}}
 </tbody>
