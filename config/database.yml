@@ -3,3 +3,4 @@ development:
   host: localhost
   database: films_ember_development
   pool: 5
+
