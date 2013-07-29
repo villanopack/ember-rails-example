@@ -1,8 +1,10 @@
 development:
   adapter: postgresql
-  database: my_database_development
+  host: localhost
+  database: films_ember_development
   pool: 5
-  timeout: 5000
+  username: postgres
+  password: superv1ll4
 test:
   adapter: postgresql
   database: my_datbase_test
