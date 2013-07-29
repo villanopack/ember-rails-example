@@ -3,4 +3,6 @@ development:
   host: localhost
   database: films_ember_development
   pool: 5
+  username: postgres
+  password: superv1ll4
 

@@ -1,21 +1,25 @@
-<div class="div_buscador span12">
-
-  <form {{ action buscar on="submit"}} class="form-inline">
-    <legend>Buscador general</legend>
+<div class="div_buscador span12" style="margin-bottom: 50px">
+  <legend>Buscador general</legend>
     <div class="control-group">
       <label class="control-label" for="peliculas">Peliculas</label>
       <div class="controls">
-        {{view Ember.TextField valueBinding=query placeholder="titulo de la pelicular" required="true"}}
+        {{view App.InputBuscador valueBinding=query placeholder="titulo de la pelicular" required="true"}}
       </div>
     </div>
     <div class="control-group">
       <div class="controls">
-        {{view Ember.Checkbox checkedBinding="affinity" }}  Buscar en omdbapi
+        {{view  App.CheckBoxBuscador checkedBinding=affinity }}  Buscar en omdbapi
       </div>
     </div>
-    <button {{action buscar }} type="submit" class="btn btn-primary">Buscar</button>
-  </form>
-</div>
+  {{#if affinity}}
+  <div class="control-group">
+      <div class="controls">
+        <button class="btn btn-primary" {{action buscar }}> Buscar </button>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+ </div>
 
  {{#if affinity}}
 
