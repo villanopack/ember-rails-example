@@ -7,7 +7,9 @@ App.Movie = DS.Model.extend
   free: DS.attr 'boolean'
   duration : DS.attr 'string'
   artwork: DS.belongsTo('App.Artwork')
-
+  portada_img:( ->
+   @get('artwork.thumb')
+  ).property('artwork')
   calificacion:( ->
     "buena"
   ).property('rating_average')
