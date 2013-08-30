@@ -1,6 +1,6 @@
 class FilmsController < ApplicationController
-  # GET /films
-  # GET /films.json
+  # GET /movies
+  # GET /movies.json
   def index
     @films = Film.all
 
@@ -10,8 +10,8 @@ class FilmsController < ApplicationController
     end
   end
 
-  # GET /films/1
-  # GET /films/1.json
+  # GET /movies/1
+  # GET /movies/1.json
   def show
     @film = Film.find(params[:id])
 
@@ -20,8 +20,8 @@ class FilmsController < ApplicationController
     end
   end
 
-  # GET /films/new
-  # GET /films/new.json
+  # GET /movies/new
+  # GET /movies/new.json
   def new
     @film = Film.new
 
@@ -31,13 +31,13 @@ class FilmsController < ApplicationController
     end
   end
 
-  # GET /films/1/edit
+  # GET /movies/1/edit
   def edit
     @film = Film.find(params[:id])
   end
 
-  # POST /films
-  # POST /films.json
+  # POST /movies
+  # POST /movies.json
   def create
     @film = Film.new(params[:film])
     respond_to do |format|
@@ -49,8 +49,8 @@ class FilmsController < ApplicationController
     end
   end
 
-  # PUT /films/1
-  # PUT /films/1.json
+  # PUT /movies/1
+  # PUT /movies/1.json
   def update
     @film = Film.find(params[:id])
     respond_to do |format|
@@ -62,8 +62,8 @@ class FilmsController < ApplicationController
     end
   end
 
-  # DELETE /films/1
-  # DELETE /films/1.json
+  # DELETE /movies/1
+  # DELETE /movies/1.json
   def destroy
     @film = Film.find(params[:id])
     @film.destroy

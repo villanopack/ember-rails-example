@@ -1,7 +1,7 @@
-App.FilmsIndexController = Ember.ArrayController.extend
+App.MoviesIndexController = Ember.ArrayController.extend
 
   init: ->
-    console.log "entra en films-index"
+    console.log "entra en movies-index"
 
   borrar: (modelo) ->
     transaction = @get("store").transaction()

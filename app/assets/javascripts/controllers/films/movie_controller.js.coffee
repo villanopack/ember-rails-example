@@ -1,7 +1,7 @@
-App.FilmsFilmController = Em.ObjectController.extend
+App.MoviesMovieController = Em.ObjectController.extend
 
   init: ->
-    console.log "entra en films-film"
+    console.log "entra en movies-movie"
 
   destroy: ->
     if window.confirm("Are you sure you want to delete this contact?")

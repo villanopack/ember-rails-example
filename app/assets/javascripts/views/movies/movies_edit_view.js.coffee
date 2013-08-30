@@ -1,3 +1,3 @@
 App.FilmsEditView = Em.View.extend
 
-  template: "films/edit2"
+  template: "movies/edit2"

@@ -1,4 +1,4 @@
-App.FilmsNewRoute = Em.Route.extend
+App.MoviesNewRoute = Em.Route.extend
 
   model: ->
     transaction = @get('store').transaction()

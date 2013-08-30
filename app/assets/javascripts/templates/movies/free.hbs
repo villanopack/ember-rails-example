@@ -1,0 +1,22 @@
+<h5 style="float: left;margin-bottom: 30px">Total películas indexadas :  {{numPeliculas}} </h5>
+
+<table class="table">
+<thead>
+<tr>
+  <th>Titulo</th>
+  <th>Rating</th>
+  <th>Description</th>
+  <th>Acciones</th>
+</tr>
+</thead>
+<tbody>
+{{#each movie in controller}}
+<tr>
+  <td>{{movie.title}}</td>
+  <td>{{movie.rating_average}}</td>
+  <td>{{movie.short_plot}}</td>
+  <td>{{#linkTo 'movies.movie' movie.id }} <button class="btn">Ver</button> {{/linkTo}}</td>
+</tr>
+{{/each}}
+</tbody>
+</table>

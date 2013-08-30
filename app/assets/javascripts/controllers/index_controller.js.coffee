@@ -6,8 +6,8 @@ App.ApplicationController = Em.Controller.extend
     @get('ruta_controller') == 'films'
   ).property('ruta_controller')
 
-  isActores: ( ->
-    @get('ruta_controller') == 'actores'
+  isPeliculasFree: ( ->
+    @get('ruta_controller') == 'filmsFree'
   ).property('ruta_controller')
 
   isBuscador: ( ->

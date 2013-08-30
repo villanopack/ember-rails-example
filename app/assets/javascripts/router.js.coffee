@@ -1,15 +1,9 @@
 # For more information see: http://emberjs.com/guides/routing/
 
 App.Router.map ()->
-   @resource 'films' , ->
+   @resource 'movies' , ->
+      @route 'free'
       @route 'index'
-      @route 'film', path: '/:film_id'
-      @route 'new'
-      @route 'edit', path: '/:film_id/edit'
-   @resource 'actors', ->
-     @route 'index'
-     @route 'actor', path: '/:actor_id'
-     @route 'new'
-     @route 'edit', path: '/:actor_id/edit'
+      @route 'movie', path: '/:movie'
    @resource 'buscador'
 

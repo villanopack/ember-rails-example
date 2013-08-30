@@ -1,0 +1,33 @@
+ <div class="rows">
+   <div class="caracteristicas span6">
+     <div class="general span12">
+       <div class="rows">
+         <div class="descripcion span6">
+             <h3>Titulo</h3>
+             <p>{{ title }}</p>
+
+             <h5>Rating</h5>
+             <p>{{ rating_average }}</p>
+
+             <h5>Descripcion</h5>
+             <p>{{ short_plot }}</p>
+
+             <h5>Duration</h5>
+             <p>{{ duration }}</p>
+
+         </div>
+         <div class="multimedia span6">
+           <br/>
+           <br/>
+           <img class="thumb" style="height: 150px;width: 150px" {{bindAttr  src="url_thumb" }} />
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="Acciones span6">
+      <h3>Acciones</h3>
+        <ul>
+          <li style="list-style: none; margin-bottom: 10px">{{#linkTo 'movies.free'}} <button class="btn"> Volver Listado </button>{{/linkTo}}</li>
+        </ul>
+   </div>
+ </div>

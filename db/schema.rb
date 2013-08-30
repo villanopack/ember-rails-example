@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(:version => 20130728091540) do
   add_index "actors_films", ["actor_id"], :name => "index_actors_films_on_actor_id"
   add_index "actors_films", ["film_id"], :name => "index_actors_films_on_film_id"
 
-  create_table "films", :force => true do |t|
+  create_table "movies", :force => true do |t|
     t.string   "titulo"
     t.string   "categoria"
     t.boolean  "estreno"
